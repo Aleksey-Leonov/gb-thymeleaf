@@ -24,6 +24,7 @@
                 <th scope="col">Цена</th>
                 <th scope="col">Редактировать</th>
                 <th scope="col">Удалить</th>
+                <th scope="col">Добавить в корзину</th>
             </tr>
             </thead>
             <tbody>
@@ -38,6 +39,9 @@
                 <td>
 <!--                    th:href="@{/product/delete/' + ${product.id}}"-->
                     <a type="button" class="btn btn-danger" th:href="@{/product/delete(id=${product.id})}">Удалить</a>
+                </td>
+                <td>
+                    <a type="button" class="btn btn-warning" th:href="@{/cart/add(product_id=${product.id})}">В корзину</a>
                 </td>
             </tr>
             </tbody>
